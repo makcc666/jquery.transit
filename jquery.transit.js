@@ -507,7 +507,7 @@
 
     // Build the duration/easing/delay attributes for it.
     var attribs = '' + toMS(duration) + ' ' + easing;
-    if (parseInt(delay, 10) > 0) { attribs += ' ' + toMS(delay); }
+    if (Number.isFinite(parseInt(delay, 10))) { attribs += ' ' + toMS(delay); }
 
     // For more properties, add them this way:
     // "margin 200ms ease, padding 200ms ease, ..."
